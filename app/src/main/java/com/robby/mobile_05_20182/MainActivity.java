@@ -1,8 +1,8 @@
 package com.robby.mobile_05_20182;
 
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements CityAdapter.DataC
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         Uri uri = Uri.parse("https://api.openweathermap.org/data/2.5/weather").buildUpon()
                 .appendQueryParameter("id", String.valueOf(city.getId()))
-                .appendQueryParameter("appid", "3b10c9364d5afadd24cf38fae2bcd2bd")
+                .appendQueryParameter("appid", "your_api_key")
                 .build();
         StringRequest request = new StringRequest(Request.Method.GET, uri.toString(), new Response.Listener<String>() {
             @Override
