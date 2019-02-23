@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements CityAdapter.DataC
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         Uri uri = Uri.parse("https://api.openweathermap.org/data/2.5/weather").buildUpon()
                 .appendQueryParameter("id", String.valueOf(city.getId()))
-                .appendQueryParameter("appid", "your_api_key")
+                .appendQueryParameter("appid", BuildConfig.ApiKey)
                 .build();
         StringRequest request = new StringRequest(Request.Method.GET, uri.toString(), new Response.Listener<String>() {
             @Override
